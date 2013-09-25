@@ -1,9 +1,18 @@
 # Goat
 
-**Goats eat anything!**
 
-Goat is simple helper tool for Go developers who don't want
-be confined to a Go *workspace*.
+        _))
+       /* \     _~
+       `;'\\__-' \_
+          | )  _ \ \
+         / / ``   w w
+        w w
+
+
+**Know what you need? It's a Goat.**
+
+Goat is simple helper tool for Go developers who do not want
+to be confined to a Go *workspace*.
 
 
 ## Usage
@@ -15,8 +24,11 @@ below to fully understand why.
 Goat can work with old-school workspaces as long as a `.go`
 file is added to the workspace's root directory, so, personally,
 I alias `go` to `goat` in my `.profile` or `.bashrc` file, 
-and just "*go* from there".
+and just *go* from there, i.e.
 
+```bash
+    alias go=goat
+```
 
 ## How It Works
 
@@ -49,10 +61,18 @@ So then your project looks like this:
       mydomain.org/
         myapp/
 
-And you can edit the code via the more concise `lib` directory.
+And you can edit the code via the more accessible `lib` directory.
 
 Conversely you can `ln -s lib mydomain.org/myapp` instead, if you
 wish. It should work the same either way.
+
+
+## Coming Soon
+
+The next version of our friendly Goat will utilize the `.go` file
+more project metadata. In paritcular project dependencies, with
+which the goat will be able to install them all in one fell swoop!
+And maybe we'll find a few other nice things for the goat to do.
 
 
 ## Caveats
@@ -60,9 +80,8 @@ wish. It should work the same either way.
 Perhaps it would be nice if the projects `*.go` source code files
 could be in the toplevel directory, like it is for projects that
 use a workspace, but linking `src/mydomain.org/myapp` to `../../..`
-(the project's root), well, that might prove problematic
-given all the other content. But please let me know if I am 
-wrong about that!
+(the project's root), well, that might prove problematic given
+all the other content. But please let me know I am wrong about that!
 
 
 ## Copyrights

@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# Goat
+# Copyright (c) 2013 Open Bonhemians
+# FreeBSD License
+
+goat() {
+  declare x=$PWD GOPATH GOBIN    # handles the restore automatically
+
+  while [[ "$x" ]]; do           # you might like a `-n` here.
+    [[ -f "$x/.go" ]] && break                  
+    x=${x%/*}
+  done
+
+  if [[ "$x" ]]; then
+    #if [[ "$GOSHARE" ]]; then
+    #  export GOPATH="$x:$GOSHARE"
+    #  export GOBIN="$x/bin:${GOSHARE//://bin:}/bin"
+    #else
+      export GOPATH="$x:$GOPATH"
+      export GOBIN="$x/bin:$GOBIN"
+    #fi
+
+    #GOCMD=${GOCMD:=go}
+    #command $GOCMD "$@"
+    \go "$@"
+  else
+    echo "error: no .go mark file found"
+  fi
+}
+
+goat "$@"

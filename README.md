@@ -1,3 +1,7 @@
+**This project has been archived. Goat was a handy little wrapper for Go's workspace-based workflow, auto-discovering project roots via a `.go` marker file and setting `GOPATH` accordingly. It was made obsolete by the introduction of Go modules in Go 1.11 (2018), which solved the workspace problem properly.**
+
+---
+
 # Goat
 
 
